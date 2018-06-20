@@ -2,7 +2,7 @@
 
 .bg {
   &--white { background-color: $white; }
-  &--light { background-color: $grey-lightest; }
+  &--light { background-color: $s-blue-lightest; }
   &--dark  { background-color: $grey-dark; }
   &--img   { @include background-attributes; }
   &__fixed {

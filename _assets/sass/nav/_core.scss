@@ -38,9 +38,9 @@ $core-nav-padding-sm: 1rem;
 // ---------- NAV FOR CORE SE SITE ----------
 
 // the breakpoint for the core nav list to appear as the mobile nav
-$nav-list-bp: 870px;
+$nav-list-bp: 865px;
 // the breakpoint for the logo to appear at the bottom of the mobile nav
-$logo-bp: 600px;
+$logo-bp: 670px;
 
 .core-nav {
   height: 100%;
@@ -87,7 +87,7 @@ $logo-bp: 600px;
       flex-grow: 3; // needed for firefox
     }
     @include bp($nav-list-bp) {
-      width: 66.66%;
+      width: 80%;
       justify-content: flex-start;
     }
   }
@@ -101,6 +101,9 @@ $logo-bp: 600px;
     @include bp($logo-bp) {
       width: 33.33%;
       visibility: visible;
+    }
+    @include bp($nav-list-bp) {
+      width: 20%;
     }
   }
   &__list {

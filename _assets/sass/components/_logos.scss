@@ -3,6 +3,7 @@
 .logo {
   display: inline-block;
   width: 100%;
+  line-height: 0;
   &--se {
     max-width: 140px;
     padding-top: 3px;
@@ -16,7 +17,10 @@
     }
   }
   &--partner { // max-width for this is about 150x46px
-    max-width: 120px;
-    &-sm { max-width: 100px; }
+    max-width: 170px;
+    &-sm {
+      max-width: 130px;
+      transform: translateY(-3px);
+    }
   }
 }

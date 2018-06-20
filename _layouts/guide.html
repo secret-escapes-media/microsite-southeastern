@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="bg--light">
+  <div class="container vpad--xxl">
+    <div class="width width--lg text--xxl text--center">
+      <p>{{page.intro}}</p>
+      <p>Hop aboard! The train’s about to leave the station… Calling at:</p>
+    </div>
+  </div>
+</div>
+
+{% for item in page.destinations %}
+  <div {% cycle '', 'class="bg--light"' %}>
+    <div class="container vpad--xxxl">
+      <div class="text--center">
+        <h2 class="title title--xxxl">{{item.title}}</h2>
+        <div class="width width--xl space--md">
+          <p class="text--lg">{{item.description}}</p>
+          <div class="space--md">
+            <a href="#southeaster-destination-link" class="btn btn--outline {% cycle 'btn--outline-green', 'btn--outline-blue' %}">Tickets to {{item.title}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="space--xl row row--6-6 row--xxl-4-4-4 row--gutters-lg">
+        {% for item in item.pois %}
+          <div class="col">
+            <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/img.jpg');"></div>
+            <h3 class="title title--md space--sm">{{item.title}}</h3>
+            <p>{{item.description}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% include page/promo-campaign.html %}
+
+<div class="bg--light">
+  <div class="container vpad--xxl">
+    <div class="text--center">
+      <h4 class="title title--lg">Read more guides</h4>
+    </div>
+    <div class="row row--6-6 width width--xxl space--lg">
+      {% assign guide-pages = site.html_pages | where: 'layout', 'guide' %}
+      {% for item in guide-pages %}
+        {% if page.id != item.id %}
+          <div class="col">
+            <div class="bg-img bg-img--1-1" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
+              <a href="{{site.baseurl}}{{item.url}}" class="bg-img__link"></a>
+              <div class="bg-img__content">
+                <h5 class="title title--lg">{{item.title}}</h5>
+              </div>
+              <div class="bg-img__bg-overlay"></div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="container vpad--xxl">
+  <div class="text--center">
+    <h3 class="title title--xxl">Special Offers</h3>
+  </div>
+  <div class="row row--xl-6-6 row--gutters-lg space--xl">
+    {% assign offers-preview = site.data.offers | sort: 'saved' | reverse %}
+    {% for offer in offers-preview limit: 2 %}
+      <div class="col">
+        {% include offer/offer.html %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="text--center space--xxl">
+    <a href="{{site.baseurl}}/offers" class="btn btn--lg btn--orange">View all offers</a>
+  </div>
+</div>
