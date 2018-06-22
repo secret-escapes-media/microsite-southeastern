@@ -1,6 +1,33 @@
 // general styles for the project that wouldn't be a reuseable component
 
 .se-box {
-  border: 10px solid $s-blue-royal;
+  max-width: 500px;
+  color: $white;
+  border: 8px solid $s-blue-royal;
   background-color: $s-cyan;
+}
+
+.travel-time {
+  display: flex;
+  justify-content: center;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    color: $s-blue-dark;
+    font-weight: 400;
+    font-size: $s-1;
+    line-height: 1.33;
+    text-align: left;
+    background-color: #ebeff1;
+    border-radius: 9999999rem;
+    &--white { background-color: $white; }
+  }
+  .icon { flex-shrink: 0; }
+}
+
+.hspace {
+  display: inline-block;
+  padding-right: .5rem;
 }

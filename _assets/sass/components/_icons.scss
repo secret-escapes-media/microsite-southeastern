@@ -13,9 +13,20 @@ $desktop-icon-size: 24px;
   background-size: $mobile-icon-size;
   &--menu { background-image: url("../img/icons/menu.svg"); }
   &--close { background-image: url("../img/icons/close.svg"); }
+  &--clock { background-image: url("../img/icons/clock.svg"); }
   @include bp($md){
     height: $desktop-icon-size;
     width: $desktop-icon-size;
     background-size: $desktop-icon-size;
+  }
+  &--sm {
+    height: ($mobile-icon-size / 1.33);
+    width: ($mobile-icon-size / 1.33);
+    background-size: ($mobile-icon-size / 1.33);
+    @include bp($md){
+      height: ($desktop-icon-size / 1.33);
+      width: ($desktop-icon-size / 1.33);
+      background-size: ($desktop-icon-size / 1.33);
+    }
   }
 }

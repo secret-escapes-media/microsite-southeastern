@@ -8,59 +8,64 @@ title: Overview
 banner:
   content: >
     <div class="container container--no-padding text--center">
-      <h2 class="banner-title-sup-alt">The South&shy;east:</h2>
+      <h2 class="banner-title-sup-alt">The South East:</h2>
       <h1 class="banner-title">A Secret Guide</h1>
-      <h2 class="banner-title-sub">...with Southeastern Railway</h2>
+      <h2 class="banner-title-sub">...with Southeastern</h2>
     </div>
 ---
 
 <div class="bg--light">
   <div class="container vpad--xxl">
     <div class="width width--xl text--xl text--center">
-      <p>From micropubs to indie boutiques, discover our Secret Guide to the Southeast with Southeastern Railway.</p>
-      <p>We’ve compiled our favourite hidden gems in glorious destinations, from Margate to Hastings and beyond. Plan your perfect weekend away with our guide and escape the city with Southeastern – taking the stress out of travel. In little over an hour you could be sipping espresso at Morelli’s or digging for treasure at Robert’s Rummage, after an effortless ride through beautiful countryside. Find your perfect place to stay with luxurious hotel offers for a truly relaxing break.</p>
-      <p>The Southeast may yet surprise you – unpick its secrets here.</p>
+      <p>From micropubs to indie boutiques, discover our Secret Guide to the South East with Southeastern.</p>
+      <p>We’ve compiled our favourite hidden gems in glorious destinations, from Margate to Hastings and beyond. Plan your perfect weekend away with our guide and escape the city with Southeastern – taking the stress out of travel. In little over an hour you could be indulging in gelato at Morelli's or digging for treasure at Robert’s Rummage, after an effortless ride through beautiful countryside. Find your perfect place to stay with luxurious hotel offers and take advantage of the Southeastern summer offer with unmissable off-peak day returns starting at £15.</p>
+      <p>The South East – unpick its secrets here.</p>
       <div class="space--md"></div>
-      <a href="{{site.client.link}}" class="btn btn--green">Buy Train Tickets</a>
+      <a href="{{site.client.link}}" class="btn btn--green">Buy Tickets From £15 Return</a>
     </div>
   </div>
 </div>
 
-<div class="container vpad--xxl">
-  {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'nav-order' %}
-  {% for item in guide-pages %}
-    <div class="row row--xl-6-6 row--valign-center{% unless forloop.first %} space--xxl{% endunless %}">
-      <div class="col col--7">
-        <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
-          <a href="{{site.baseurl}}{{item.url}}" class="bg-img__link"></a>
+<div class="bg--white">
+  <div class="container vpad--xxl">
+    {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'nav-order' %}
+    {% for item in guide-pages %}
+      <div class="row row--xl-6-6 row--valign-center{% unless forloop.first %} space--xxl{% endunless %}">
+        <div class="col col--7">
+          <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
+            <a href="{{site.baseurl}}{{item.url}}" class="bg-img__link"></a>
+          </div>
+        </div>
+        <div class="col col--5">
+          <h3 class="sub-title sub-title--sm">{{item.banner.title-sup}}</h3>
+          <h2 class="title title--xxxl title--bold">{{item.banner.title}}</h2>
+          <p class="text--xxl space--sm">{{item.intro}}</p>
+          <div class="space--sm">
+            <a href="{{site.baseurl}}{{item.url}}" class="btn btn--blue">Read the guide</a>
+          </div>
         </div>
       </div>
-      <div class="col col--5">
-        <h2 class="title title--xl">{{item.title}}</h2>
-        <p class="text--xl space--sm">{{item.intro}}</p>
-        <div class="space--sm">
-          <a href="{{site.baseurl}}{{item.url}}" class="btn btn--blue">Read the guide</a>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
 
 {% include page/promo-campaign.html %}
 
-<div class="container vpad--xxl">
-  <div class="text--center">
-    <h3 class="title title--xxl">Special Offers</h3>
-  </div>
-  <div class="row row--xl-6-6 row--gutters-lg space--xl">
-    {% assign offers-preview = site.data.offers | sort: 'saved' | reverse %}
-    {% for offer in offers-preview limit: 4 %}
-      <div class="col">
-        {% include offer/offer.html %}
-      </div>
-    {% endfor %}
-  </div>
-  <div class="text--center space--xxl">
-    <a href="{{site.baseurl}}/offers" class="btn btn--lg btn--orange">View all offers</a>
+<div class="bg--white">
+  <div class="container vpad--xxl">
+    <div class="text--center">
+      <h3 class="title title--xxl">Special Offers</h3>
+    </div>
+    <div class="row row--xl-6-6 row--gutters-lg space--xl">
+      {% assign offers-preview = site.data.offers | sort: 'saved' | reverse %}
+      {% for offer in offers-preview limit: 4 %}
+        <div class="col">
+          {% include offer/offer.html %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text--center space--xxl">
+      <a href="{{site.baseurl}}/offers" class="btn btn--lg btn--orange">View all offers</a>
+    </div>
   </div>
 </div>
