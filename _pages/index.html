@@ -11,6 +11,8 @@ banner:
       <h2 class="banner-title-sup-alt">The South East:</h2>
       <h1 class="banner-title">A Secret Guide</h1>
       <h2 class="banner-title-sub">...with Southeastern</h2>
+      <div class="space--lg"></div>
+      <a href="#map-link" class="btn btn--lg btn--green">Explore The Map</a>
     </div>
 ---
 
@@ -28,7 +30,7 @@ banner:
 
 <div class="bg--white">
   <div class="container vpad--xxl">
-    {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'nav-order' %}
+    {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'group-order' %}
     {% for item in guide-pages %}
       <div class="row row--xl-6-6 row--valign-center{% unless forloop.first %} space--xxl{% endunless %}">
         <div class="col col--7">
@@ -46,6 +48,28 @@ banner:
         </div>
       </div>
     {% endfor %}
+  </div>
+</div>
+
+<div class="bg--light">
+  <div class="container vpad--xxxl">
+    <div class="width width--xxl">
+      <div class="row row--xl-6-6 row--valign-center">
+        {% assign blog-george = site.html_pages | where: 'id', 'blog-george' | first %}
+        <div class="col">
+          <h2 class="title title--xl">{{blog-george.title}}</h2>
+          <p class="text--lg space--sm">{{blog-george.intro}}...</p>
+          <div class="space--sm">
+            <a href="{{site.baseurl}}{{blog-george.url}}" class="btn btn--green">Read the Blog</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/img.jpg');">
+            <a href="{{site.baseurl}}{{blog-george.url}}" class="bg-img__link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

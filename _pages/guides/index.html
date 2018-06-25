@@ -1,0 +1,31 @@
+---
+layout: default
+id: guides
+title: Guides
+group: true
+nav: true
+nav-order: 2
+---
+
+<div class="bg--white">
+  <div class="container vpad--xxxl">
+    {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'group-order' %}
+    {% for item in guide-pages %}
+      <div class="row row--xl-6-6 row--valign-center{% unless forloop.first %} space--xxl{% endunless %}">
+        <div class="col col--7">
+          <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
+            <a href="{{site.baseurl}}{{item.url}}" class="bg-img__link"></a>
+          </div>
+        </div>
+        <div class="col col--5">
+          <h3 class="sub-title sub-title--sm">{{item.banner.title-sup}}</h3>
+          <h2 class="title title--xxxl title--bold">{{item.banner.title}}</h2>
+          <p class="text--xxl space--sm">{{item.intro}}...</p>
+          <div class="space--sm">
+            <a href="{{site.baseurl}}{{item.url}}" class="btn btn--blue">Read the guide</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

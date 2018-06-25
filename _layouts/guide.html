@@ -53,7 +53,7 @@ layout: default
       <h4 class="title title--lg">Read more guides</h4>
     </div>
     <div class="row row--xxl-6-6 space--lg">
-      {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'nav-order' %}
+      {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'group-order' %}
       {% for item in guide-pages %}
         {% if page.id != item.id %}
           <div class="col">

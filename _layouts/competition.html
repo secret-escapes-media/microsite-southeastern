@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include page/head.html %}
+
+  <body class="blog__bg">
+
+    {% include components/tracking.html %}
+
+    {% include page/header.html %}
+
+    <div class="bg--white">
+      <div class="site-header__offset"></div>
+      {% include nav/site.html %}
+    </div>
+
+    <div class="content-spacing">
+      <div class="vpad--xxxl bg--white">
+        <div class="container">
+          <div class="width width--xl text--center">
+            <h1 class="title title--xxxl">{{page.title}}</h1>
+            <div class="space--xl"></div>
+            <a href="#entry-form" class="btn btn--lg btn--blue">Enter Now</a>
+            <div class="space--xxxl"></div>
+            <div class="width width--lg text--xxl">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur placeat ab ex. Tenetur ea maiores quos sed nemo veritatis rerum, aspernatur suscipit earum quas, et commodi reiciendis fugit, doloremque perspiciatis.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur placeat ab ex. Tenetur ea maiores quos sed nemo veritatis rerum, aspernatur suscipit earum quas, et commodi reiciendis fugit, doloremque perspiciatis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg--light vpad--xl">
+        <div class="container">
+          {{ content }}
+        </div>
+      </div>
+
+      <div id="entry-form" class="bg--white vpad--xl text--center">
+        <div class="container">
+          <h3 class="title title--sm">Enter below for your chance to win</h3>
+          <div class="space--lg"></div>
+          <div class="width width--lg boxpad--sm bg--light">
+            <iframe src="{{page.entry-form.url}}" width="100%" height="{{page.entry-form.height}}"></iframe>
+          </div>
+        </div>
+      </div>
+
+      {% include page/promo-campaign.html %}
+
+    </div>
+
+    {% include page/footer.html %}
+
+  </body>
+
+</html>
