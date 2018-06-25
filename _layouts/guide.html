@@ -17,7 +17,7 @@ layout: default
       <div class="text--center {% if item.town %}container container--xxl vpad--xxxl bg--img text--white bg--dark{% endif %}"{% if item.town %} style="background-image: url('{{site.img}}/content/{{page.id}}/{{item.id}}.jpg');"{% endif %}>
         <h2 class="title title--xxxl">{{item.title}}</h2>
         <div class="travel-time">
-          <div class="travel-time__wrap{% cycle '', ' travel-time__wrap--white' %}">
+          <div class="travel-time__wrap{% cycle '', ' travel-time__wrap--white' %}{% if item.town %} travel-time__wrap--white{% endif %}">
             <div class="icon icon--sm icon--clock"></div> <div class="hspace"></div> {{item.travel-time}} from {{page.departing-station}}
           </div>
         </div>
@@ -25,7 +25,7 @@ layout: default
           <p class="text--lg{% if item.town %} text--bold{% endif %}">{{item.description}}</p>
           <div class="space--md">
             {% if item.offer-price %}
-              <a href="{{site.client.link}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}">Tickets for £{{item.offer-price}} return</a>
+              <a href="{{site.client.link}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}">Tickets for £{{item.offer-price}} Day Return</a>
             {% else %}
               <a href="{{item.ticket-link}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}">Tickets to {{item.title}}</a>
             {% endif %}
