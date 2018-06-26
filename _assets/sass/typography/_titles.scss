@@ -4,12 +4,12 @@
 
   // custom content headline
   font-family: $font-title-01;
-  line-height: 1.15;
+  line-height: 1.125;
   letter-spacing: -.02em;
 
   &--bold { font-weight: 700;}
 
-  &--xxxl   { font-size: $s8; }
+  &--xxxl   { font-size: $s7; }
   &--xxl    { font-size: $s7; }
   &--xl     { font-size: $s6; }
   &--lg     { font-size: $s5; }
@@ -90,35 +90,42 @@
 .banner-title {
   // custom banner headline
   font-family: $font-title-01;
-  font-size: $s12;
+  font-size: $s8;
   font-weight: 700;
   line-height: .9;
   letter-spacing: -.025em;
-
+  @include bp($sm) { font-size: $s10; }
+  @include bp($xl) { font-size: $s12; }
 }
 
 .banner-title-sup {
   font-family: $font-title-01;
-  font-size: $s5;
+  font-size: $s3;
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: .25em;
+  @include bp($sm) { font-size: $s4; }
+  @include bp($xl) { font-size: $s5; }
 }
 
 .banner-title-sub {
   font-family: $font-title-01;
-  font-size: $s3;
+  font-size: $s1;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -.015em;
   margin-top: 1.25rem;
+  @include bp($sm) { font-size: $s2; }
+  @include bp($xl) { font-size: $s3; }
 }
 
 .banner-title-sup-alt {
   font-family: $font-title-01;
-  font-size: $s8;
+  font-size: $s4;
   font-weight: 300;
   line-height: 1.1;
   letter-spacing: .02em;
+  @include bp($sm) { font-size: $s6; }
+  @include bp($xl) { font-size: $s8; }
 }

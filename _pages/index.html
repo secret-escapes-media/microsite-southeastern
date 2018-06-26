@@ -4,6 +4,7 @@ id: overview
 nav: true
 nav-order: 1
 title: Overview
+meta-title: "The South East: A Secret Guide"
 
 banner:
   content: >
@@ -19,28 +20,28 @@ se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/of
 <div class="bg--light">
   <div class="container vpad--xxl">
     <div class="width width--xl text--xl text--center">
-      <p>From micropubs to indie boutiques, discover our Secret Guide to the South East with Southeastern.</p>
+      <p>{{site.description}}</p>
       <p>We’ve compiled our favourite hidden gems in glorious destinations, from Margate to Hastings and beyond. Plan your perfect weekend away with our guide and escape the city with Southeastern – taking the stress out of travel. In little over an hour you could be indulging in gelato at Morelli's or digging for treasure at Robert’s Rummage, after an effortless ride through beautiful countryside. Find your perfect place to stay with luxurious hotel offers and take advantage of the Southeastern summer offer with unmissable Off-Peak day returns starting at £15.</p>
       <p>The South East – unpick its secrets here.</p>
       <div class="space--md"></div>
-      <a href="https://www.southeasternrailway.co.uk/destinations-and-offers/offers?utm_source=secret_escapes&utm_medium=partnerships&utm_campaign=secret_escapes&utm_content=hub_overview_cta" class="btn btn--green">Buy Day Return From £15</a>
+      <a href="https://www.southeasternrailway.co.uk/destinations-and-offers/offers?utm_source=secret_escapes&utm_medium=partnerships&utm_campaign=secret_escapes&utm_content=hub_overview_cta" class="btn btn--green" id="track-overview-intro-se-btn">Buy Day Return From £15</a>
     </div>
   </div>
 </div>
 
 <div class="bg--white">
-  <div class="container vpad--xxl">
+  <div class="container vpad--xxxl">
     {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'nav-order' %}
     {% for item in guide-pages %}
-      <div class="row row--xl-6-6 row--valign-center{% unless forloop.first %} space--xxl{% endunless %}">
-        <div class="col col--7">
-          <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
+      <div class="row row--valign-center{% unless forloop.first %} space--xxxl{% endunless %}">
+        <div class="col col--xl-7">
+          <div class="bg-img bg-img--3-2 bg-img--xl-4-3" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
             <a href="{{site.baseurl}}{{item.url}}" class="bg-img__link"></a>
           </div>
         </div>
-        <div class="col col--5">
+        <div class="col col--xl-5">
           <h3 class="sub-title sub-title--sm">{{item.banner.title-sup}}</h3>
-          <h2 class="title title--xxxl title--bold">{{item.banner.title}}</h2>
+          <h2 class="title title--xxl title--bold">{{item.banner.title}}</h2>
           <p class="text--xxl space--sm">{{item.intro}}...</p>
           <div class="space--sm">
             <a href="{{site.baseurl}}{{item.url}}" class="btn btn--blue">Read the guide</a>
@@ -59,7 +60,7 @@ se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/of
       <h3 class="title title--xxl">Special Offers</h3>
     </div>
     <div class="row row--xl-6-6 row--gutters-lg space--xl">
-      {% assign offers-preview = site.data.offers | sort: 'saved' | reverse %}
+      {% assign offers-preview = site.data.offers | sort: 'price' %}
       {% for offer in offers-preview limit: 4 %}
         <div class="col">
           {% include offer/offer.html %}

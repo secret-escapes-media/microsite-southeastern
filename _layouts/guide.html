@@ -25,9 +25,9 @@ layout: default
           <p class="text--lg{% if item.town %} text--bold{% endif %}">{{item.description}}</p>
           <div class="space--md">
             {% if item.offer-price %}
-              <a href="{{site.client.link}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}">Tickets for £{{item.offer-price}} Day Return</a>
+              <a href="{{site.client.link}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}" id="track-{{item.id}}-intro-se-btn">Tickets for £{{item.offer-price}} Day Return</a>
             {% else %}
-              <a href="{{item.ticket-link}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}">Tickets to {{item.title}}</a>
+              <a href="{{item.ticket-link}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}" id="track-{{item.id}}-intro-se-destination-btn">Tickets to {{item.title}}</a>
             {% endif %}
           </div>
         </div>
@@ -82,7 +82,7 @@ layout: default
       <h3 class="title title--xxl">Special Offers</h3>
     </div>
     <div class="row row--xl-6-6 row--gutters-lg space--xl">
-      {% assign offers-preview = site.data.offers | sort: 'saved' | reverse %}
+      {% assign offers-preview = site.data.offers | sort: 'price' %}
       {% for offer in offers-preview limit: 2 %}
         <div class="col">
           {% include offer/offer.html %}
