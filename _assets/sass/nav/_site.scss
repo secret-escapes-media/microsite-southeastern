@@ -2,7 +2,7 @@
 
 $site-nav-height:    56px;
 $site-nav-height-sm: 44px;
-$nav-width-bp:       640px;
+$nav-width-bp:       860px;
 $nav-color:          $s-blue-dark;
 
 
@@ -94,8 +94,8 @@ $nav-color:          $s-blue-dark;
     color: $white;
     transition: background-color $transition-time ease;
     white-space: nowrap;
-    &.is-current      { background-color: rgba($nav-color,.66); }
-    .no-touch &:hover { background-color: rgba($nav-color,1); }
+    &.is-current      { background-color: rgba(darken($nav-color,7),.66); }
+    .no-touch &:hover { background-color: rgba(darken($nav-color,7),1); }
     @include bp($nav-width-bp){
       padding-left: $s0;
       padding-right: $s0;

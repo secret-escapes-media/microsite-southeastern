@@ -5,7 +5,7 @@
       <h3 class="title title--xl text--bold">Summer tickets for £15, £20 & £25</h3>
       <p class="text--xxl text--normal">Unmissable Off-Peak Day Return tickets from London to over 13 destinations</p>
       <div class="space--sm">
-        <a href="{{site.client.link}}" class="btn btn--lg btn--southeastern">Buy tickets</a>
+        <a href="{% if page.se-banner-link %}{{page.se-banner-link}}{% else %}{{site.client.link}}{% endif %}" class="btn btn--lg btn--southeastern" id="track-{{page.id}}-banner-se-btn">Buy tickets</a>
       </div>
     </div>
   </div>
