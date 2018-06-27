@@ -27,16 +27,6 @@
   expires: 2018/07/04
   link: https://www.secretescapes.com/rowhill-grange-hotel-and-utopia-spa-dartford-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
-- title: Hever Hotel
-  id: hever-hotel
-  location: Edenbridge, Kent
-  description: A relaxing stay surrounded by historic sights in the picturesque Kent countryside, including breakfast, dinner allowance and a bottle of prosecco
-  price: 119
-  price-description: per room per night
-  saved: 67
-  expires: 2018/06/27
-  link: https://www.secretescapes.com/hever-hotel-edenbridge-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
-
 - title: Frasers
   id: frasers
   location: Egerton, Kent
@@ -47,12 +37,12 @@
   expires: 2018/07/04
   link: https://www.secretescapes.com/frasers-egerton-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
-- title: Eastwell Manor - A Champneys Spa Hotel
-  id: eastwell-manor-a-champneys-spa-hotel
-  location: Ashford, Kent
-  description: A beautiful manor house stay in Kent with an award-winning restaurant, golf course and Champneys spa - breakfast, dinner and spa access included
-  price: 154
+- title: Sands Hotel
+  id: sands-hotel
+  location: Margate, Kent
+  description: An award-winning boutique townhouse in the coastal town of Margate - breakfast and a choice of rooms included
+  price: 112
   price-description: per room per night
-  saved: 42
-  expires: 2018/06/27
-  link: https://www.secretescapes.com/eastwell-manor-a-champneys-spa-hotel-ashford-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
+  saved: 28
+  expires: 2018/07/04
+  link: https://www.secretescapes.com/sands-hotel-margate-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern

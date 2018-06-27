@@ -61,7 +61,7 @@ se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/of
     </div>
     <div class="row row--xl-6-6 row--gutters-lg space--xl">
       {% assign offers-preview = site.data.offers | sort: 'price' %}
-      {% for offer in offers-preview limit: 4 %}
+      {% for offer in offers-preview limit: 2 %}
         <div class="col">
           {% include offer/offer.html %}
         </div>
