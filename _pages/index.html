@@ -13,7 +13,7 @@ banner:
       <h1 class="banner-title">A Secret Guide</h1>
       <h2 class="banner-title-sub">...with Southeastern</h2>
       <div class="space--lg"></div>
-      <a href="#map-link" class="btn btn--lg btn--green">Explore The Map</a>
+      <a class="btn btn--green js-map-preview">Explore The Map</a>
     </div>
 
 se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/offers?utm_source=secret_escapes&utm_medium=partnerships&utm_campaign=secret_escapes&utm_content=hub_overview_banner
@@ -33,7 +33,7 @@ se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/of
 
 <div class="bg--white">
   <div class="container vpad--xxxl">
-    {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'nav-order' %}
+    {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'group-order' %}
     {% for item in guide-pages %}
       <div class="row row--valign-center{% unless forloop.first %} space--xxxl{% endunless %}">
         <div class="col col--xl-7">
@@ -56,43 +56,24 @@ se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/of
 
 <div class="bg--light">
   <div class="container vpad--xxxl">
-    <div class="width width--xxl">
       <div class="row row--xl-6-6 row--valign-center">
         {% assign blog-george = site.html_pages | where: 'id', 'blog-george' | first %}
         <div class="col">
-          <h2 class="title title--xl">{{blog-george.title}}</h2>
-          <p class="text--lg space--sm">{{blog-george.intro}}...</p>
+          <h2 class="title title--xxl">{{blog-george.title}}</h2>
+          <p class="text--xxl space--sm">Discover our adventures in the South East in our journal...</p>
           <div class="space--sm">
-            <a href="{{site.baseurl}}{{blog-george.url}}" class="btn btn--green">Read the Blog</a>
+            <a href="{{site.baseurl}}{{blog-george.url}}" class="btn btn--green">Read the Journal</a>
           </div>
         </div>
         <div class="col">
-          <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/img.jpg');">
+          <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/content/blog-george/nav.jpg');">
             <a href="{{site.baseurl}}{{blog-george.url}}" class="bg-img__link"></a>
           </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
 {% include page/promo-campaign.html %}
 
-<div class="bg--white">
-  <div class="container vpad--xxl">
-    <div class="text--center">
-      <h3 class="title title--xxl">Special Offers</h3>
-    </div>
-    <div class="row row--xl-6-6 row--gutters-lg space--xl">
-      {% assign offers-preview = site.data.offers | sort: 'price' %}
-      {% for offer in offers-preview limit: 2 %}
-        <div class="col">
-          {% include offer/offer.html %}
-        </div>
-      {% endfor %}
-    </div>
-    <div class="text--center space--xxl">
-      <a href="{{site.baseurl}}/offers" class="btn btn--lg btn--orange">View all offers</a>
-    </div>
-  </div>
-</div>
+{% include page/offer-sample.html %}

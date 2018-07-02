@@ -76,21 +76,4 @@ layout: default
   </div>
 </div>
 
-<div class="bg--white">
-  <div class="container vpad--xxl">
-    <div class="text--center">
-      <h3 class="title title--xxl">Special Offers</h3>
-    </div>
-    <div class="row row--xl-6-6 row--gutters-lg space--xl">
-      {% assign offers-preview = site.data.offers | sort: 'price' %}
-      {% for offer in offers-preview limit: 2 %}
-        <div class="col">
-          {% include offer/offer.html %}
-        </div>
-      {% endfor %}
-    </div>
-    <div class="text--center space--xxl">
-      <a href="{{site.baseurl}}/offers" class="btn btn--lg btn--orange">View all offers</a>
-    </div>
-  </div>
-</div>
+{% include page/offer-sample.html %}

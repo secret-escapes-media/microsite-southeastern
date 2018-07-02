@@ -3,52 +3,61 @@
 
   {% include page/head.html %}
 
-  <body class="blog__bg">
+  <body>
 
     {% include components/tracking.html %}
 
     {% include page/header.html %}
 
-    <div class="bg--white">
+    <div class="bg--fade" style="background-image: url('{{site.img}}/content/competition/bg.jpg'); background-color: #242335;">
       <div class="site-header__offset"></div>
       {% include nav/site.html %}
-    </div>
-
-    <div class="content-spacing">
-      <div class="vpad--xxxl bg--white">
+      <div class="content-spacing">
         <div class="container">
           <div class="width width--xl text--center">
-            <h1 class="title title--xxxl">{{page.title}}</h1>
+            <div class="space--xxxxl"></div>
             <div class="space--xl"></div>
+            <h1 class="title title--xxl text--white">{{page.title}}</h1>
+            <div class="space--lg"></div>
             <a href="#entry-form" class="btn btn--lg btn--blue">Enter Now</a>
             <div class="space--xxxl"></div>
-            <div class="width width--lg text--xxl">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur placeat ab ex. Tenetur ea maiores quos sed nemo veritatis rerum, aspernatur suscipit earum quas, et commodi reiciendis fugit, doloremque perspiciatis.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur placeat ab ex. Tenetur ea maiores quos sed nemo veritatis rerum, aspernatur suscipit earum quas, et commodi reiciendis fugit, doloremque perspiciatis.</p>
+            <div class="width width--xl bg--white boxpad--xl text--xl">
+              <p>Hop on your Southeastern service to Ramsgate, taking in the scenic Kent countryside before a stroll along the harbourfront. Perched atop the winding Madeira Walk sits Albion House, a beautifully designed B&B that effortlessly mixes en vogue interiors with a rich history. Built in 1791 and once graced by Queen Victoria, you’ll now find seaside views and boutique charms.</p>
+              <p>Enjoy a two-night stay in the King room, with seaside views that will make you forget all about the city life. With £500 to spend at your leisure, unpick the fine dining spots across Thanet, with short trips to Broadstairs, Margate and Sandwich all at your doorstep.</p>
+              <p>We’re also giving away a runner’s up prize of £500 Secret Escapes voucher so you can plan your own South East getaway!</p>
+            </div>
+            <div class="space--xxxl"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row row--4-4-4">
+            <div class="col">
+              <div class="bg-img bg-img--3-2 bg-img--lg-1-1" style="background-image: url('{{site.img}}/content/competition/01.jpg');"></div>
+            </div>
+            <div class="col">
+              <div class="bg-img bg-img--3-2 bg-img--lg-1-1" style="background-image: url('{{site.img}}/content/competition/02.jpg');"></div>
+            </div>
+            <div class="col">
+              <div class="bg-img bg-img--3-2 bg-img--lg-1-1" style="background-image: url('{{site.img}}/content/competition/03.jpg');"></div>
+            </div>
+          </div>
+          <div class="space--xxxxl"></div>
+        </div>
+
+        <div id="entry-form" class="bg--white vpad--xxl text--center">
+          <div class="container">
+            <h3 class="title title--md">Enter below for your chance to win</h3>
+            <div class="space--lg"></div>
+            <div class="width width--lg boxpad--sm bg--light">
+              <iframe src="{{page.entry-form.url}}" width="100%" height="{{page.entry-form.height}}"></iframe>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="bg--light vpad--xl">
-        <div class="container">
-          {{ content }}
-        </div>
-      </div>
-
-      <div id="entry-form" class="bg--white vpad--xl text--center">
-        <div class="container">
-          <h3 class="title title--sm">Enter below for your chance to win</h3>
-          <div class="space--lg"></div>
-          <div class="width width--lg boxpad--sm bg--light">
-            <iframe src="{{page.entry-form.url}}" width="100%" height="{{page.entry-form.height}}"></iframe>
-          </div>
-        </div>
-      </div>
-
-      {% include page/promo-campaign.html %}
-
     </div>
+
+    {% include page/promo-campaign.html %}
 
     {% include page/footer.html %}
 

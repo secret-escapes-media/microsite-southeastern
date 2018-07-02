@@ -15,4 +15,9 @@
     @include background-attributes;
     background-color: $grey-darker;
   }
+  &--fade {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 1920px auto;
+  }
 }

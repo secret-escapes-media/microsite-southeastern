@@ -3,83 +3,75 @@
 
   {% include page/head.html %}
 
-  <body class="blog__bg">
+  <body>
 
     {% include components/tracking.html %}
 
     {% include page/header.html %}
 
-    <div class="bg--white">
+    <div class="bg--fade" style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg'); background-color: {{page.bg-color}};">
+
       <div class="site-header__offset"></div>
       {% include nav/site.html %}
-    </div>
 
-    <div class="content-spacing">
-      <div class="vpad--xxxl bg--white">
-        <div class="container">
+      <div class="content-spacing">
+        <div class="container text--white">
 
-          <div class="width width--xl">
-            <h1 class="title title--xxxl">{{page.title}}</h1>
-            <div class="space--xl"></div>
-            <div class="author">
-              <div class="author__image">
-                <img src="{{site.img}}/content/blog/{{page.id}}/{{page.author.id}}.jpg" alt="{{page.author.name}}">
-              </div>
-              <div class="author__description">
-                <p>{{page.intro}}</p>
-              </div>
+          <div class="space--xxxxl"></div>
+          <div class="space--xl"></div>
+          <div class="text--center width width--xl">
+            <h1 class="title title--xxxxl ">{{page.title}}</h1>
+          </div>
+          <div class="space--md"></div>
+          <div class="author">
+            <div class="author__image">
+              <img src="{{site.img}}/content/{{page.id}}/{{page.author.id}}.jpg" alt="{{page.author.name}}">
+            </div>
+            <div class="author__description">
+              <p><span class="title title--xxs">{{page.author.name}}</span> <span class="hspace"></span><span class="text--xl">Secret Escapes</span></p>
+              <p>{{page.intro}}</p>
             </div>
           </div>
-
-          {{ content }}
-
           <div class="space--xxl"></div>
-
-          <div class="width width--xxl">
+          <div class="width width--xl">
+            {% for item in page.blog %}
+            <div class="width width--xl text--lg vpad--xl">
+              <h2 class="title title--xl text--center">{{item.title}}</h2>
+              <div class="space--lg"></div>
+              <div class="bg-img bg-img--16-9" style="background-image: url('{{site.img}}/content/{{page.id}}/{{item.image}}.jpg');"></div>
+              <div class="space--lg"></div>
+              <div class="width width--lg text--xl text--normal">
+                {{item.content}}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="">
+            <div class="space--xl"></div>
             <div class="row row--xl-6-6 row--valign-center">
               {% assign blog-george = site.html_pages | where: 'id', 'blog-george' | first %}
               <div class="col">
-                <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/img.jpg');">
-                  <a href="{{site.baseurl}}{{blog-george.url}}" class="bg-img__link"></a>
+                <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/competition/03.jpg');">
+                  <a href="{{site.baseurl}}/competition" class="bg-img__link"></a>
                 </div>
               </div>
               <div class="col">
-                <h2 class="title title--lg">Win this trip</h2>
-                <p class="text--lg space--sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, mollitia autem pariatur earum porro amet numquam facere eaque, enim odit rerum officia.</p>
+                <h2 class="title title--xl">Win your own adventure in the South&nbsp;East!</h2>
+                <p class="text--xxl text--normal space--sm">Win a boutique stay in Kent with £500 spending money!</p>
                 <div class="space--sm">
-                  <a href="{{site.baseurl}}/competition" class="btn btn--green">Enter Now</a>
+                  <a href="{{site.baseurl}}/competition" class="btn btn--blue">Enter Now</a>
                 </div>
               </div>
             </div>
-          </div>
-
-
-
-        </div>
-      </div>
-
-      {% include page/promo-campaign.html %}
-
-      <div class="bg--white">
-        <div class="container vpad--xxl">
-          <div class="text--center">
-            <h3 class="title title--xxl">Special Offers</h3>
-          </div>
-          <div class="row row--xl-6-6 row--gutters-lg space--xl">
-            {% assign offers-preview = site.data.offers | sort: 'saved' | reverse %}
-            {% for offer in offers-preview limit: 4 %}
-              <div class="col">
-                {% include offer/offer.html %}
-              </div>
-            {% endfor %}
-          </div>
-          <div class="text--center space--xxl">
-            <a href="{{site.baseurl}}/offers" class="btn btn--lg btn--orange">View all offers</a>
+            <div class="space--xxxxl"></div>
           </div>
         </div>
       </div>
-
     </div>
+
+    {% include page/promo-campaign.html %}
+
+    {% include page/offer-sample.html %}
 
     {% include page/footer.html %}
 
