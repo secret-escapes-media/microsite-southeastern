@@ -1,0 +1,64 @@
+<div class="bg--white">
+  <div class="js-modal modal__bg is-closed">
+    <div class="modal__wrap">
+
+      <!-- loop through all of the pages to get the towns and individual POIs -->
+      {% assign guide-pages = site.html_pages | where: 'layout', 'guide' | sort: 'group-order' %}
+      {% for guide in guide-pages %}
+        {% for item in guide.destinations %}
+          {% if item.town %}
+            <div class="modal modal--image is-closed" data-modal-id="{{item.id}}">
+              <div class="js-close-modal modal__close"></div>
+              <div class="bg-img bg-img--16-9" style="background-image: url('{{site.img}}/content/{{guide.id}}/{{item.id}}-map.jpg');"></div>
+              <div class="modal__content text--center">
+                <h2 class="title title--xxl">{{item.title}}</h2>
+                <div class="travel-time">
+                  <div class="travel-time__wrap">
+                    <div class="icon icon--sm icon--clock"></div> <div class="hspace"></div> {{item.travel-time}} from {{guide.departing-station}}
+                  </div>
+                </div>
+                <div class="width width--xl space--md">
+                  <p>{{item.description}}</p>
+                  <div class="space--md">
+                    {% if item.offer-price %}
+                      <a href="{{item.link}}" class="btn btn--outline btn--outline-{% cycle 'green', 'blue' %}">Tickets for £{{item.offer-price}} Day Return</a>
+                    {% else %}
+                      <a href="{{item.link}}" class="btn btn--outline btn--outline-{% cycle 'green', 'blue' %}">Tickets to {{item.title}}</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+          {% for poi in item.pois %}
+            <div class="modal modal--image is-closed" data-modal-id="{{poi.id}}">
+              <div class="js-close-modal modal__close"></div>
+              <div class="bg-img bg-img--16-9" style="background-image: url('{{site.img}}/content/{{guide.id}}/{{item.id}}/{{poi.id}}.jpg');"></div>
+              <div class="modal__content text--center">
+                <h2 class="title title--xl">{{poi.title}}</h2>
+                <div class="width width--xl space--xs">
+                  <p>{{poi.description}}</p>
+                  <div class="space--md">
+                    <a href="{{site.baseurl}}{{guide.url}}#{{item.id}}" class="btn {% if item.town %}btn--{% cycle 'green', 'blue' %}{% else %}btn--outline btn--outline-{% cycle 'green', 'blue' %}{% endif %}">See more in {{item.title}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+
+      {% assign all-offers = site.data.offers | sort: 'price' %}
+      {% for offer in all-offers %}
+        <div class="modal modal--offer is-closed" data-modal-id="{{offer.id}}">
+          <div class="js-close-modal modal__close"></div>
+          {% include offer/offer.html %}
+          <div class="text--center space--xl">
+            <a href="{{site.baseurl}}/offers" class="btn btn--orange">View all offers</a>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

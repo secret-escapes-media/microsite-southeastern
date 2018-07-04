@@ -17,7 +17,10 @@
 
     {% include page/footer.html %}
 
-    {% include modal/modal.html %}
+    {% if page.id == "overview" %}
+      {% include modal/map.html %}
+      {% include modal/modal-overview.html %}
+    {% endif %}
 
   </body>
 
