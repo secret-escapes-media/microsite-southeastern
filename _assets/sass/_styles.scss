@@ -7,22 +7,22 @@
   background-color: $s-cyan;
 }
 
-.travel-time {
+.pill {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  padding: .5rem 1rem;
+  margin-top: .5rem;
+  color: $s-blue-dark;
+  font-weight: 400;
+  font-size: $s-1;
+  line-height: 1.33;
+  text-align: left;
+  background-color: #ebeff1;
+  border-radius: 9999999rem;
+  &--white { background-color: $white; }
   &__wrap {
     display: flex;
-    align-items: center;
-    padding: .5rem 1rem;
-    margin-top: .5rem;
-    color: $s-blue-dark;
-    font-weight: 400;
-    font-size: $s-1;
-    line-height: 1.33;
-    text-align: left;
-    background-color: #ebeff1;
-    border-radius: 9999999rem;
-    &--white { background-color: $white; }
+    justify-content: center;
   }
   .icon { flex-shrink: 0; }
 }

@@ -123,6 +123,7 @@ gulp.task('build-main-js', function(cb) {
     // map marker data
     './_assets/js/_components/marker-data/pois.js',
     './_assets/js/_components/marker-data/offers.js',
+    './_assets/js/_components/marker-data/stations.js',
 
     // custom js for project
     './_assets/js/main.js',

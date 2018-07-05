@@ -11,9 +11,6 @@ $desktop-icon-size: 24px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: $mobile-icon-size;
-  &--menu { background-image: url("../img/icons/menu.svg"); }
-  &--close { background-image: url("../img/icons/close.svg"); }
-  &--clock { background-image: url("../img/icons/clock.svg"); }
   @include bp($md){
     height: $desktop-icon-size;
     width: $desktop-icon-size;
@@ -29,4 +26,8 @@ $desktop-icon-size: 24px;
       background-size: ($desktop-icon-size / 1.33);
     }
   }
+  &--menu { background-image: url("../img/icons/menu.svg"); }
+  &--close { background-image: url("../img/icons/close.svg"); }
+  &--clock { background-image: url("../img/icons/clock.svg"); }
+  &--pin { background-image: url("../img/icons/pin.svg"); background-size: 13px; }
 }

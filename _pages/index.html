@@ -16,6 +16,10 @@ banner:
       <a class="btn btn--green js-open-map">Explore The Map</a>
     </div>
 
+journal:
+  title: Discover our adventures in the South East in our journal...
+  link: "/journals/george/"
+
 se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/offers?utm_source=secret_escapes&utm_medium=partnerships&utm_campaign=secret_escapes&utm_content=hub_overview_banner
 ---
 
@@ -56,18 +60,17 @@ se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/of
 
 <div class="bg--light">
   <div class="container vpad--xxxl">
-      <div class="row row--xl-6-6 row--valign-center">
+      <div class="row row--valign-center">
         {% assign blog-george = site.html_pages | where: 'id', 'blog-george' | first %}
-        <div class="col">
-          <h2 class="title title--xxl">{{blog-george.title}}</h2>
-          <p class="text--xxl space--sm">Discover our adventures in the South East in our journal...</p>
+        <div class="col col--xl-5">
+          <h2 class="title title--lg">{{page.journal.title}}</h2>
           <div class="space--sm">
-            <a href="{{site.baseurl}}{{blog-george.url}}" class="btn btn--green">Read the Journal</a>
+            <a href="{{site.baseurl}}{{page.journal.link}}" class="btn btn--green">Read the Journal</a>
           </div>
         </div>
-        <div class="col">
-          <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/content/blog-george/nav.jpg');">
-            <a href="{{site.baseurl}}{{blog-george.url}}" class="bg-img__link"></a>
+        <div class="col col--xl-7">
+          <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/content/the-journal/nav.jpg');">
+            <a href="{{site.baseurl}}{{page.journal.link}}" class="bg-img__link"></a>
           </div>
         </div>
       </div>

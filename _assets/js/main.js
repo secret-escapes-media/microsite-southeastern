@@ -41,6 +41,21 @@ function map(){
       }
     });
 
+    ///////////// adds normal marker when there is no cluster
+    map.addLayer({
+      id: 'stations',
+      type: 'symbol',
+      // Add a GeoJSON source containing place coordinates and information.
+      source: {
+        type: 'geojson',
+        data: stationMarkers
+      },
+      layout: {
+        "icon-image": "pin-southeastern", // custom icon is in the mapbox style spritesheet
+        'icon-anchor': "bottom"
+      }
+    });
+
     ///////////// creates cluster shape layer to the map
     map.addLayer({
       id: "clusters",
@@ -77,7 +92,7 @@ function map(){
       source: "poi-markers",
       filter: ["!has", "point_count"],
       layout: {
-        "icon-image": "map-pin-southeastern", // custom icon is in the mapbox style spritesheet
+        "icon-image": "pin-highlight", // custom icon is in the mapbox style spritesheet
         "icon-anchor": "bottom",
         "icon-allow-overlap": true
       }
@@ -104,6 +119,12 @@ function map(){
       modalOpen(null, clickedOfferId);
     });
 
+    ///////////// Launches station when station marker is clicked
+    map.on('click', 'stations', function (e) {
+      var clickedStationId = e.features[0].properties.id
+      modalOpen(null, clickedStationId);
+    });
+
     ///////////// center the map markers within the viewport
     var bounds = new mapboxgl.LngLatBounds();
     function getMapBounds() {
@@ -113,7 +134,10 @@ function map(){
       offerMarkers.features.forEach(function(feature) {
         bounds.extend(feature.geometry.coordinates);
       });
-      map.fitBounds(bounds, {padding: 20}); // adds padding so markers aren't on edge
+      stationMarkers.features.forEach(function(feature) {
+        bounds.extend(feature.geometry.coordinates);
+      });
+      map.fitBounds(bounds, {padding: 100}); // adds padding so markers aren't on edge
     }
     getMapBounds(); // resets the view when the map loads
     windowResize(getMapBounds); // resets the view after the viewport has finished resizing
