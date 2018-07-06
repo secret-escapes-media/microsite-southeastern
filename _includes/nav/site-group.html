@@ -5,7 +5,13 @@
 <div class="group-nav">
   {% for group-page in group-pages %}<span class="group-nav__item bg--img" style="background-image: url('{{site.img}}/content/{{group-page.id}}/nav.jpg');">
     <a class="group-nav__link{% if group-page.id == page.id %} is-current{% endif %}" href="{{site.baseurl}}{{group-page.url}}">
-      {% if group-page.layout == "guide" %}<span class="title title--bold title--md">{{group-page.banner.title}}</span>{% else %}{{group-page.title}}{% endif %}
+      <span class="title title--bold title--md">
+        {% if group-page.layout == "guide" %}
+          {{group-page.banner.title}}
+        {% else %}
+          {{group-page.title}}
+        {% endif %}
+      </span>
     </a>
   </span>{% endfor %}
 </div>

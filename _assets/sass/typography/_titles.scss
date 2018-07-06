@@ -96,19 +96,20 @@
   font-weight: 700;
   line-height: .9;
   letter-spacing: -.025em;
+  color: white;
   @include bp($sm) { font-size: $s10; }
   @include bp($xl) { font-size: $s12; }
 }
 
 .banner-title-sup {
   font-family: $font-title-01;
-  font-size: $s3;
+  font-size: $s2;
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: .25em;
-  @include bp($sm) { font-size: $s4; }
-  @include bp($xl) { font-size: $s5; }
+  @include bp($sm) { font-size: $s3; }
+  @include bp($xl) { font-size: $s4; }
 }
 
 .banner-title-sub {

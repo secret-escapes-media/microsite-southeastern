@@ -1,9 +1,23 @@
 ---
 layout: default
 id: journal
+nav: true
+nav-order: 3
+nav-title: The Journal
 title: The Journal
 group: true
+
+intro: >
+  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 ---
+
+<div class="bg--light">
+  <div class="container vpad--xxl">
+    <div class="width width--xl text--xl text--center">
+      {{page.intro}}
+    </div>
+  </div>
+</div>
 
 <div class="bg--white">
   <div class="container vpad--xxxl">
@@ -16,11 +30,11 @@ group: true
           </div>
         </div>
         <div class="col col--5">
-          <h3 class="sub-title sub-title--sm">{{item.banner.title-sup}}</h3>
-          <h2 class="title title--xxxl title--bold">{{item.banner.title}}</h2>
-          <p class="text--xxl space--sm">{{item.intro}}...</p>
+          <h3 class="sub-title sub-title--xs">Next stop...</h3>
+          <h2 class="title title--xxxl title--bold">{{item.parent.title}}</h2>
+          <p class="text--xxl space--sm">{{item.parent.intro}}...</p>
           <div class="space--sm">
-            <a href="{{site.baseurl}}{{item.url}}" class="btn btn--blue">Read the guide</a>
+            <a href="{{site.baseurl}}{{item.url}}" class="btn btn--blue">Read the journal</a>
           </div>
         </div>
       </div>

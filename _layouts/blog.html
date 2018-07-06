@@ -20,9 +20,10 @@
           <div class="space--xxxxl"></div>
           <div class="space--xl"></div>
           <div class="text--center width width--xl">
-            <h1 class="title title--xxxxl ">{{page.title}}</h1>
+            {% if page.banner.title-sup %}<h2 class="banner-title-sup">{{page.banner.title-sup}}</h2>{% endif %}
+            <h1 class="banner-title">{{page.banner.title}}</h1>
           </div>
-          <div class="space--md"></div>
+          <div class="space--xl"></div>
           <div class="author">
             <div class="author__image">
               <img src="{{site.img}}/content/{{page.id}}/{{page.author.id}}.jpg" alt="{{page.author.name}}">
@@ -57,7 +58,7 @@
               </div>
               <div class="col">
                 <h2 class="title title--xl">Win your own adventure in the South&nbsp;East!</h2>
-                <p class="text--xxl text--normal space--sm">Win a boutique stay in Kent with £500 spending money!</p>
+                <p class="text--xxl text--normal space--sm">Win a boutique stay in Kent with £500 spending money courtesy of Secret Escapes!</p>
                 <div class="space--sm">
                   <a href="{{site.baseurl}}/competition" class="btn btn--blue">Enter Now</a>
                 </div>
