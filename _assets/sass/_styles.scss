@@ -63,5 +63,11 @@
     * + p {
       padding-top: .33rem;
     }
+    & span { display: block; }
+    & .hspace { display: none; }
+    @include bp($md){
+      & span { display: inline; }
+      & .hspace { display: inline; }
+    }
   }
 }

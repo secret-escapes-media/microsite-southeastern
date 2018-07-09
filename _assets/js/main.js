@@ -37,7 +37,8 @@ function map(){
         data: offerMarkers
       },
       layout: {
-        "icon-image": "map-pin-offer" // custom icon is in the mapbox style spritesheet
+        "icon-image": "map-pin-offer", // custom icon is in the mapbox style spritesheet
+        'icon-anchor': "bottom"
       }
     });
 
@@ -137,7 +138,7 @@ function map(){
       stationMarkers.features.forEach(function(feature) {
         bounds.extend(feature.geometry.coordinates);
       });
-      map.fitBounds(bounds, {padding: 100}); // adds padding so markers aren't on edge
+      map.fitBounds(bounds, {padding: 60}); // adds padding so markers aren't on edge
     }
     getMapBounds(); // resets the view when the map loads
     windowResize(getMapBounds); // resets the view after the viewport has finished resizing

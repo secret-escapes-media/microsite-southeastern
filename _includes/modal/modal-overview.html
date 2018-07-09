@@ -13,8 +13,8 @@
               <div class="bg-img bg-img--16-9" style="background-image: url('{{site.img}}/content/{{guide.id}}/{{item.id}}-map.jpg');"></div>
               <div class="modal__content text--center">
                 <h2 class="title title--xxl">{{item.title}}</h2>
-                <div class="pill">
-                  <div class="pill__wrap">
+                <div class="pill__wrap">
+                  <div class="pill">
                     <div class="icon icon--sm icon--clock"></div> <div class="hspace"></div> {{item.travel-time}} from {{guide.departing-station}}
                   </div>
                 </div>
@@ -77,7 +77,7 @@
                 </div>
               </div>
               <div class="space--md"></div>
-              <a href="{{station.link}}" class="btn btn--blue">Buy tickets</a>
+              <a href="{{station.link}}" id="track-map-modal-station-{{station-id}}" class="btn btn--blue">Buy tickets</a>
             </div>
           </div>
         </div>

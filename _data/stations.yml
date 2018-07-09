@@ -69,9 +69,14 @@
   id: faversham-station
   link: "#link"
 
-- title: Canterbury station
+- title: Canterbury East Station
   town: Canterbury, England
-  id: canterbury-station
+  id: canterbury-east-station
+  link: "#link"
+
+- title: Canterbury West Station
+  town: Canterbury, England
+  id: canterbury-west-station
   link: "#link"
 
 - title: Sandwich Station

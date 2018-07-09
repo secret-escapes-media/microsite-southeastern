@@ -200,14 +200,28 @@ var stationMarkers = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Canterbury station",
-        "id": "canterbury-station"
+        "title": "Canterbury East Station",
+        "id": "canterbury-east-station"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           1.075946,
           51.274358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Canterbury West Station",
+        "id": "canterbury-west-station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.075500, 
+          51.284146
         ]
       }
     },
