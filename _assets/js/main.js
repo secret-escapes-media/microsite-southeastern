@@ -14,9 +14,17 @@ function map(){
     style: 'mapbox://styles/hamishjgray/cjj740poy21gv2sqpicc0kxws',
     logoPosition: 'bottom-right',
     zoom: 8,
-    center: [0.835399, 51.150949]
+    minZoom: 7,
+    center: [0.6702, 51.1897]
   });
 
+  // disable map rotation using right click + drag
+  map.dragRotate.disable();
+
+  // disable map rotation using touch rotation gesture
+  map.touchZoomRotate.disableRotation();
+
+  // builds map with custom functionality
   map.on('load', function(event) {
 
     ///////////// add the poi marker data so it can create clusters
@@ -27,7 +35,7 @@ function map(){
       clusterMaxZoom: 14,
     });
 
-    ///////////// adds normal marker when there is no cluster
+    ///////////// adds se offer markers to the map
     map.addLayer({
       id: 'se-offers',
       type: 'symbol',
@@ -37,12 +45,13 @@ function map(){
         data: offerMarkers
       },
       layout: {
-        "icon-image": "map-pin-offer", // custom icon is in the mapbox style spritesheet
+        "icon-image": "se-offer-01", // custom icon is in the mapbox style spritesheet
+        "icon-size": .8,
         'icon-anchor': "bottom"
       }
     });
 
-    ///////////// adds normal marker when there is no cluster
+    ///////////// add station markers to the map
     map.addLayer({
       id: 'stations',
       type: 'symbol',
@@ -52,8 +61,19 @@ function map(){
         data: stationMarkers
       },
       layout: {
-        "icon-image": "pin-southeastern", // custom icon is in the mapbox style spritesheet
-        'icon-anchor': "bottom"
+        "icon-image": "train-station-02", // custom icon is in the mapbox style spritesheet
+        "icon-size": .8,
+        'icon-anchor': "bottom",
+        "text-field": "{title}",
+        "text-font": ["Roboto Slab Regular"],
+        "text-size": 13,
+        "text-anchor": "top",
+        "text-letter-spacing": .02
+      },
+      paint: {
+        "text-color": "#2e2e2e",
+        "text-halo-color": "rgba(248,244,240,.66)",
+        "text-halo-width": 3,
       }
     });
 
@@ -65,7 +85,7 @@ function map(){
       filter: ["has", "point_count"],
       paint: { // style formatting for the cluster circle
         "circle-color": "#1f214d",
-        "circle-radius": 20
+        "circle-radius": 22
       }
     });
 
@@ -78,11 +98,11 @@ function map(){
       layout: { // style formatting for cluster number
         "text-field": "{point_count_abbreviated}",
         "text-font": ["Roboto Slab Bold"],
-        "text-size": 18,
+        "text-size": 22,
         "text-allow-overlap": true
       },
       paint: {
-        "text-color": "#ffffff"
+        "text-color": "#2baee5"
       }
     });
 
@@ -93,7 +113,8 @@ function map(){
       source: "poi-markers",
       filter: ["!has", "point_count"],
       layout: {
-        "icon-image": "pin-highlight", // custom icon is in the mapbox style spritesheet
+        "icon-image": "poi-star-01", // custom icon is in the mapbox style spritesheet
+        "icon-size": .8,
         "icon-anchor": "bottom",
         "icon-allow-overlap": true
       }
@@ -108,22 +129,22 @@ function map(){
       // would like to get this so that the zoom level goes until the cluster separates, but after half a day of looking turns out it is a bit too complicated
     });
 
-    ///////////// Launches modal when marker is clicked
+    ///////////// Launches POI modal when marker is clicked
     map.on('click', 'unclustered-point', function (e) {
       var clickedModalId = e.features[0].properties.id
       modalOpen(null, clickedModalId);
     });
 
-    ///////////// Launches offer card when se offer marker is clicked
+    ///////////// Launches offer card modal when se offer marker is clicked
     map.on('click', 'se-offers', function (e) {
       var clickedOfferId = e.features[0].properties.id
       modalOpen(null, clickedOfferId);
     });
 
-    ///////////// Launches station when station marker is clicked
+    ///////////// Opens station information in a new window when clicked
     map.on('click', 'stations', function (e) {
-      var clickedStationId = e.features[0].properties.id
-      modalOpen(null, clickedStationId);
+      var clickedStationLink = e.features[0].properties.link
+      window.open(clickedStationLink, '_blank');
     });
 
     ///////////// center the map markers within the viewport
@@ -138,10 +159,18 @@ function map(){
       stationMarkers.features.forEach(function(feature) {
         bounds.extend(feature.geometry.coordinates);
       });
-      map.fitBounds(bounds, {padding: 60}); // adds padding so markers aren't on edge
+      // set different padding depending on original viewport width
+      // not super precise but should catch mobile phones and reduce the padding
+      var iconPadding;
+      if ($(window).innerWidth() < 400) {
+        iconPadding = { "padding": 30 };
+      } else {
+        iconPadding = { "padding": 60 };
+      }
+      map.fitBounds(bounds, iconPadding); // adds padding so markers aren't on edge
+
     }
     getMapBounds(); // resets the view when the map loads
-    windowResize(getMapBounds); // resets the view after the viewport has finished resizing
 
   });
 }
@@ -154,6 +183,8 @@ console.log();
 
 $('.js-open-map').on('click', function(e) {
   e.preventDefault();
+  // disable scrolling on background content (doesn't work iOS)
+  $('body').addClass('disable-scroll');
   // dont reload the map if its already open
   if ($('#map').children().length === 0) { map(); }
   $('.map__wrap').removeClass('is-closed').addClass('is-open');
@@ -161,5 +192,7 @@ $('.js-open-map').on('click', function(e) {
 
 $('.js-close-map').on('click', function(e) {
   e.preventDefault();
+  // enable scrolling on background content
+  $('body').removeClass('disable-scroll');
   $('.map__wrap').removeClass('is-open').addClass('is-closed');
 })

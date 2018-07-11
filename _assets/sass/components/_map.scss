@@ -16,12 +16,17 @@
     height: 100%;
     width: 100%;
     background-color: #f8f4f0; // seems to be the bg colour of when the mapbox layers are loading in
-    &.is-open   {
+    $fade-transition-time: .66s;
+    &.is-open {
       visibility: visible;
+      opacity: 1;
+      transition: visibility 0s linear 0s, opacity $fade-transition-time;
       .mapboxgl-ctrl-attrib.mapboxgl-compact::after { display: block; }
     }
     &.is-closed {
+      opacity: 0;
       visibility: hidden;
+      transition: visibility 0s linear $fade-transition-time, opacity $fade-transition-time;
       .mapboxgl-ctrl-attrib.mapboxgl-compact::after { display: none; }
     }
   }

@@ -1,5 +1,12 @@
 // general styles for the project that wouldn't be a reuseable component
 
+.map-intro {
+  background-image: url('../img/map-texture.png');
+  background-position: center;
+  background-color: #f8f4f0;
+  box-shadow: inset 0 0 180px 0 rgba(105,98,92,.2);
+}
+
 .se-box {
   max-width: 500px;
   color: $white;

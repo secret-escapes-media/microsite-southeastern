@@ -5,7 +5,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "London St Pancras",
-        "id": "london-st-pancras"
+        "id": "london-st-pancras",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/london-st-pancras-international"
       },
       "geometry": {
         "type": "Point",
@@ -19,7 +20,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Swanley station",
-        "id": "swanley-station"
+        "id": "swanley-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/swanley"
       },
       "geometry": {
         "type": "Point",
@@ -33,13 +35,14 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Edenbridge Town Station",
-        "id": "edenbridge-town-station"
+        "id": "edenbridge-town-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/edenbridge-town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           0.067131,
-          51.200170
+          51.20017
         ]
       }
     },
@@ -47,7 +50,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Lenham station",
-        "id": "lenham-station"
+        "id": "lenham-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/lenham"
       },
       "geometry": {
         "type": "Point",
@@ -61,7 +65,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Headcorn Station",
-        "id": "headcorn-station"
+        "id": "headcorn-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/headcorn"
       },
       "geometry": {
         "type": "Point",
@@ -74,8 +79,9 @@ var stationMarkers = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Headcorn/Pluckley station",
-        "id": "headcorn-pluckley-station"
+        "title": "Pluckley station",
+        "id": "pluckley-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/pluckley"
       },
       "geometry": {
         "type": "Point",
@@ -89,12 +95,13 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Wye station",
-        "id": "wye-station"
+        "id": "wye-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/wye"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.929330,
+          0.92933,
           51.185044
         ]
       }
@@ -103,7 +110,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Westenhanger Station",
-        "id": "westenhanger-station"
+        "id": "westenhanger-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/westenhanger"
       },
       "geometry": {
         "type": "Point",
@@ -116,8 +124,9 @@ var stationMarkers = {
     {
       "type": "Feature",
       "properties": {
-        "title": "Folkestone Station",
-        "id": "folkestone-station"
+        "title": "Folkestone Central Station",
+        "id": "folkestone-central-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/folkestone-central"
       },
       "geometry": {
         "type": "Point",
@@ -131,7 +140,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Dover Priory Station",
-        "id": "dover-priory-station"
+        "id": "dover-priory-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/dover-priory"
       },
       "geometry": {
         "type": "Point",
@@ -145,7 +155,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Ramsgate Station",
-        "id": "ramsgate-station"
+        "id": "ramsgate-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/ramsgate"
       },
       "geometry": {
         "type": "Point",
@@ -159,7 +170,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Broadstairs Station",
-        "id": "broadstairs-station"
+        "id": "broadstairs-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/broadstairs"
       },
       "geometry": {
         "type": "Point",
@@ -173,7 +185,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Margate Station",
-        "id": "margate-station"
+        "id": "margate-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/margate"
       },
       "geometry": {
         "type": "Point",
@@ -187,7 +200,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Faversham Station",
-        "id": "faversham-station"
+        "id": "faversham-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/faversham"
       },
       "geometry": {
         "type": "Point",
@@ -201,7 +215,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Canterbury East Station",
-        "id": "canterbury-east-station"
+        "id": "canterbury-east-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/canterbury-east"
       },
       "geometry": {
         "type": "Point",
@@ -215,12 +230,13 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Canterbury West Station",
-        "id": "canterbury-west-station"
+        "id": "canterbury-west-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/canterbury-west"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.075500, 
+          1.0755,
           51.284146
         ]
       }
@@ -229,7 +245,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Sandwich Station",
-        "id": "sandwich-station"
+        "id": "sandwich-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/sandwich"
       },
       "geometry": {
         "type": "Point",
@@ -243,7 +260,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Hastings Station",
-        "id": "hastings-station"
+        "id": "hastings-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/hastings"
       },
       "geometry": {
         "type": "Point",
@@ -257,7 +275,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Rochester station",
-        "id": "rochester-station"
+        "id": "rochester-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/rochester"
       },
       "geometry": {
         "type": "Point",
@@ -271,7 +290,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Whitstable Station",
-        "id": "whitstable-station"
+        "id": "whitstable-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/whitstable"
       },
       "geometry": {
         "type": "Point",
@@ -285,12 +305,13 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Tunbridge Wells Station",
-        "id": "tunbridge-wells-station"
+        "id": "tunbridge-wells-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/tunbridge-wells"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.262880,
+          0.26288,
           51.130232
         ]
       }
@@ -299,7 +320,8 @@ var stationMarkers = {
       "type": "Feature",
       "properties": {
         "title": "Battle Station",
-        "id": "battle-station"
+        "id": "battle-station",
+        "link": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/battle"
       },
       "geometry": {
         "type": "Point",
