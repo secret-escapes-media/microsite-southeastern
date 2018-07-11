@@ -70,14 +70,14 @@ se-banner-link: https://www.southeasternrailway.co.uk/destinations-and-offers/of
   <div class="container vpad--xxxl">
       <div class="row row--valign-center">
         {% assign blog-george = site.html_pages | where: 'id', 'blog-george' | first %}
-        <div class="col col--xl-5">
-          <h2 class="title title--lg">{{page.journal.title}}</h2>
+        <div class="col col--5 text--center text--bp-left">
+          <h2 class="title title--md">{{page.journal.title}}</h2>
           <div class="space--sm">
             <a href="{{site.baseurl}}{{page.journal.link}}" class="btn btn--green">Read the Journal</a>
           </div>
         </div>
-        <div class="col col--xl-7">
-          <div class="bg-img bg-img--3-2" style="background-image: url('{{site.img}}/content/the-journal/nav.jpg');">
+        <div class="col col--7">
+          <div class="bg-img bg-img--16-9 bg-img--lg-3-2" style="background-image: url('{{site.img}}/content/the-journal/nav.jpg');">
             <a href="{{site.baseurl}}{{page.journal.link}}" class="bg-img__link"></a>
           </div>
         </div>

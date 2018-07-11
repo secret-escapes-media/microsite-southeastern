@@ -184,7 +184,7 @@ console.log();
 $('.js-open-map').on('click', function(e) {
   e.preventDefault();
   // disable scrolling on background content (doesn't work iOS)
-  $('body').addClass('disable-scroll');
+  $('body').addClass('map-disable-scroll');
   // dont reload the map if its already open
   if ($('#map').children().length === 0) { map(); }
   $('.map__wrap').removeClass('is-closed').addClass('is-open');
@@ -193,6 +193,6 @@ $('.js-open-map').on('click', function(e) {
 $('.js-close-map').on('click', function(e) {
   e.preventDefault();
   // enable scrolling on background content
-  $('body').removeClass('disable-scroll');
+  $('body').removeClass('map-disable-scroll');
   $('.map__wrap').removeClass('is-open').addClass('is-closed');
 })

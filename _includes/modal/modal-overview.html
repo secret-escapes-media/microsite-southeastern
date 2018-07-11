@@ -21,11 +21,7 @@
                 <div class="width width--xl space--md">
                   <p>{{item.description}}</p>
                   <div class="space--md">
-                    {% if item.offer-price %}
-                      <a href="{{item.link}}" class="btn btn--outline btn--outline-{% cycle 'green', 'blue' %}">Tickets for £{{item.offer-price}} Day Return</a>
-                    {% else %}
-                      <a href="{{item.link}}" class="btn btn--outline btn--outline-{% cycle 'green', 'blue' %}">Tickets to {{item.title}}</a>
-                    {% endif %}
+                    <a href="{{item.link}}" class="btn btn--outline btn--outline-{% cycle 'green', 'blue' %}" id="track-map-{{item.id}}-se-btn">{% if item.offer-price %}Tickets for £{{item.offer-price}} Day Return{% else %}Tickets to {{item.title}}{% endif %}</a>
                   </div>
                 </div>
               </div>
