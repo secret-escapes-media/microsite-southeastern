@@ -6,7 +6,7 @@
   {% for group-page in group-pages %}<span class="group-nav__item bg--img" style="background-image: url('{{site.img}}/content/{{group-page.id}}/nav.jpg');">
     <a class="group-nav__link{% if group-page.id == page.id %} is-current{% endif %}" href="{{site.baseurl}}{{group-page.url}}">
       <span class="title title--bold title--md">
-        {% if group-page.layout == "guide" %}
+        {% if group-page.layout == "guide" or group-page.layout == "blog" %}
           {{group-page.banner.title}}
         {% else %}
           {{group-page.title}}

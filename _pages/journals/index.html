@@ -1,38 +1,35 @@
 ---
 layout: default
-id: journal
+id: journals
 nav: true
 nav-order: 3
-nav-title: The Journal
-title: The Journal
+title: Journals
 group: true
-
-intro: >
-  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+intro: We sent two colleagues to London St Pancras to adventure into the South East. One with family and one with friends, discover their trips here…
 ---
 
 <div class="bg--light">
   <div class="container vpad--xxl">
-    <div class="width width--xl text--xl text--center">
-      {{page.intro}}
+    <div class="width width--lg text--xxl text--center">
+      <p>{{page.intro}}</p>
     </div>
   </div>
 </div>
 
 <div class="bg--white">
-  <div class="container vpad--xxxl">
+  <div class="container vpad--xxl">
     {% assign blog-pages = site.html_pages | where: 'layout', 'blog' | sort: 'group-order' %}
     {% for item in blog-pages %}
-      <div class="row row--xl-6-6 row--valign-center{% unless forloop.first %} space--xxl{% endunless %}">
-        <div class="col col--7">
-          <div class="bg-img bg-img--4-3" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
+      <div class="row row--valign-center{% unless forloop.first %} space--xxxl{% endunless %}">
+        <div class="col col--xl-7">
+          <div class="bg-img bg-img--3-2 bg-img--xl-4-3" style="background-image: url('{{site.img}}/content/{{item.id}}/nav.jpg');">
             <a href="{{site.baseurl}}{{item.url}}" class="bg-img__link"></a>
           </div>
         </div>
-        <div class="col col--5">
-          <h3 class="sub-title sub-title--xs">Next stop...</h3>
-          <h2 class="title title--xxxl title--bold">{{item.parent.title}}</h2>
-          <p class="text--xxl space--sm">{{item.parent.intro}}...</p>
+        <div class="col col--xl-5">
+          <h3 class="sub-title sub-title--xs">{{item.banner.title-sup}}</h3>
+          <h2 class="title title--xxl title--bold">{{item.banner.title}}</h2>
+          <p class="text--xxl space--sm">{{item.intro}}...</p>
           <div class="space--sm">
             <a href="{{site.baseurl}}{{item.url}}" class="btn btn--blue">Read the journal</a>
           </div>

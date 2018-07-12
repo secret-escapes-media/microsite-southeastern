@@ -103,13 +103,18 @@
 
 .banner-title-sup {
   font-family: $font-title-01;
-  font-size: $s2;
+  font-size: $s3;
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: .25em;
-  @include bp($sm) { font-size: $s3; }
-  @include bp($xl) { font-size: $s4; }
+  @include bp($sm) { font-size: $s4; }
+  @include bp($xl) { font-size: $s5; }
+  &--sm {
+    font-size: $s2;
+    @include bp($sm) { font-size: $s3; }
+    @include bp($xl) { font-size: $s4; }
+  }
 }
 
 .banner-title-sub {
