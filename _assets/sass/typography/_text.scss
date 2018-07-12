@@ -30,4 +30,7 @@
     &--bp-right  { text-align: right; }
     &--bp-center { text-align: center; }
   }
+  @include bp($xl) {
+    &--xl-left   { text-align: left; }
+  }
 }
