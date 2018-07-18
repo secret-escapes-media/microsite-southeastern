@@ -5,7 +5,7 @@
   price: 109
   price-description: per room per night
   saved: 36
-  expires: 2018/07/18
+  expires: 2018/07/25
   link: https://www.secretescapes.com/the-yarrow-hotel-broadstairs-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Best Western Plus Dover Marina Hotel & Spa
@@ -14,7 +14,7 @@
   description: A lovely waterfront, Regency-period hotel on an impressive Grade II-listed crescent in Dover, including breakfast, one three-course dinner and a spa treatment
   price: 99
   price-description: per room per night
-  expires: 2018/07/18
+  expires: 2018/07/25
   link: https://www.secretescapes.com/best-western-plus-dover-marina-hotel-and-spa-dover-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Rowhill Grange Hotel & Utopia Spa
@@ -24,7 +24,7 @@
   price: 169
   price-description: per room per night
   saved: 40
-  expires: 2018/07/18
+  expires: 2018/07/25
   link: https://www.secretescapes.com/rowhill-grange-hotel-and-utopia-spa-dartford-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Frasers
@@ -34,7 +34,7 @@
   price: 119
   price-description: per room per night
   saved: 26
-  expires: 2018/07/18
+  expires: 2018/07/25
   link: https://www.secretescapes.com/frasers-egerton-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Sands Hotel
@@ -44,7 +44,7 @@
   price: 112
   price-description: per room per night
   saved: 28
-  expires: 2018/07/18
+  expires: 2018/07/25
   link: https://www.secretescapes.com/sands-hotel-margate-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Clarendon Royal Hotel
@@ -54,7 +54,7 @@
   price: 85
   price-description: per room per night
   saved: 54
-  expires: 2018/07/18
+  expires: 2018/07/25
   link: https://www.secretescapes.com/the-clarendon-royal-hotel-gravesend-kent/sale?utm_source=SE_Media&utm_medium=Southeastern&utm_campaign=July2018
 
 - title: Albion House
@@ -64,15 +64,15 @@
   price: 125
   price-description: per room per night
   saved: 26
-  expires: 2018/07/18
+  expires: 2018/07/25
   link: https://www.secretescapes.com/albion-house-ramsgate-kent/sale?utm_source=SE_Media&utm_medium=Southeastern&utm_campaign=July2018
 
-- title: Hever Hotel
-  id: hever-hotel
-  location: Edenbridge, Kent
-  description: A relaxing stay surrounded by historic sights in the picturesque Kent countryside, including breakfast, dinner allowance and a bottle of prosecco
-  price: 119
+- title: Eastwell Manor Champneys Hotel & Spa
+  id: eastwell-manor-champneys-hotel-spa
+  location: Ashford, Kent
+  description: A beautiful manor house stay in Kent with an award-winning restaurant, golf course and Champneys spa, including breakfast, three-course dinner and spa access
+  price: 139
   price-description: per room per night
-  saved: 67
-  expires: 2018/07/18
-  link: https://www.secretescapes.com/hever-hotel-edenbridge-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
+  saved: 35
+  expires: 2018/07/23
+  link: https://www.secretescapes.com/eastwell-manor-champneys-hotel-and-spa-ashford-kent/sale?utm_source=SE_Media&utm_medium=EnglishHeritage&utm_campaign=July2018
