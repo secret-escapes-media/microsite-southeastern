@@ -1,6 +1,3 @@
-
-
-
 - title: The Yarrow Hotel
   id: the-yarrow-hotel
   location: Broadstairs, Kent
@@ -8,7 +5,7 @@
   price: 109
   price-description: per room per night
   saved: 36
-  expires: 2018/08/07
+  expires: 2018/08/15
   link: https://www.secretescapes.com/the-yarrow-hotel-broadstairs-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Best Western Plus Dover Marina Hotel & Spa
@@ -17,7 +14,7 @@
   description: A lovely waterfront, Regency-period hotel on an impressive Grade II-listed crescent in Dover, including breakfast, one three-course dinner and a spa treatment
   price: 99
   price-description: per room per night
-  expires: 2018/08/07
+  expires: 2018/08/15
   link: https://www.secretescapes.com/best-western-plus-dover-marina-hotel-and-spa-dover-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Frasers
@@ -27,7 +24,7 @@
   price: 119
   price-description: per room per night
   saved: 26
-  expires: 2018/08/07
+  expires: 2018/08/15
   link: https://www.secretescapes.com/frasers-egerton-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Sands Hotel
@@ -37,7 +34,7 @@
   price: 112
   price-description: per room per night
   saved: 28
-  expires: 2018/08/07
+  expires: 2018/08/15
   link: https://www.secretescapes.com/sands-hotel-margate-kent/sale?utm_source=SE_Media&utm_medium=June2018&utm_campaign=SouthEastern
 
 - title: Clarendon Royal Hotel
@@ -47,7 +44,7 @@
   price: 85
   price-description: per room per night
   saved: 54
-  expires: 2018/08/07
+  expires: 2018/08/15
   link: https://www.secretescapes.com/the-clarendon-royal-hotel-gravesend-kent/sale?utm_source=SE_Media&utm_medium=Southeastern&utm_campaign=July2018
 
 - title: Albion House
@@ -57,15 +54,25 @@
   price: 125
   price-description: per room per night
   saved: 26
-  expires: 2018/08/07
+  expires: 2018/08/15
   link: https://www.secretescapes.com/albion-house-ramsgate-kent/sale?utm_source=SE_Media&utm_medium=Southeastern&utm_campaign=July2018
 
-- title: Hadlow Manor
-  id: hadlow-manor
-  location: Hadlow, Kent
-  description: Relax and enjoy Kent country life at a Grade II-listed Georgian manor house in the picturesque Medway Valley - breakfast included
-  price: 49
+- title: Eastwell Manor Champneys Hotel & Spa
+  id: eastwell-manor-champneys-hotel-spa
+  location: Ashford, Kent
+  description: A beautiful manor house stay in Kent with an award-winning restaurant, golf course and Champneys spa, including breakfast, three-course dinner, and spa access
+  price: 155
   price-description: per room per night
-  saved: 47
-  expires: 2018/08/26
-  link: https://www.secretescapes.com/hadlow-manor-hadlow-kent/sale?utm_source=SE_Media&utm_medium=southeastern&utm_campaign=July2018
+  saved: 40
+  expires: 2018/08/15
+  link: https://www.secretescapes.com/eastwell-manor-champneys-hotel-and-spa-ashford-kent/sale?utm_source=SE_Media&utm_medium=EnglishHeritage&utm_campaign=July2018
+
+- title: Exclusive whole-house country manor stay on Leeds Castle estate
+  id: exclusive-whole-house-country-manor-stay-on-leeds-castle-estate
+  location: Battel Hall & Oast, Leeds Castle
+  description: Live like the lord or lady of the manor with an exclusive and private whole-house stay in the beautiful grounds of Leeds Castle – includes entry tickets to the castle
+  price: 650
+  price-description: per room per night
+  saved: 53
+  expires: 2018/08/15
+  link: https://www.secretescapes.com/battel-hall-leeds-castle-maidstone-kent/sale?utm_source=SE_Media&utm_medium=Southeastern&utm_campaign=Aug2018

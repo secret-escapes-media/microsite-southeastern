@@ -30,19 +30,6 @@ var offerMarkers = {
     {
       "type": "Feature",
       "properties": {
-        "id": "rowhill-grange-hotel-utopia-spa"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.18869100000006256,
-          51.4180497
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "frasers"
       },
       "geometry": {
@@ -95,13 +82,26 @@ var offerMarkers = {
     {
       "type": "Feature",
       "properties": {
-        "id": "hever-hotel"
+        "id": "eastwell-manor-champneys-hotel-spa"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.11242939999999635,
-          51.1975191
+          0.8833639,
+          51.1875209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "exclusive-whole-house-country-manor-stay-on-leeds-castle-estate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.617561,
+          51.250213
         ]
       }
     }
