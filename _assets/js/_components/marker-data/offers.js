@@ -17,32 +17,6 @@ var offerMarkers = {
     {
       "type": "Feature",
       "properties": {
-        "id": "best-western-plus-dover-marina-hotel-spa"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.3143598000000338,
-          51.1221724
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "frasers"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.695307200000002,
-          51.186402
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "sands-hotel"
       },
       "geometry": {
@@ -89,19 +63,6 @@ var offerMarkers = {
         "coordinates": [
           0.8833639,
           51.1875209
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "exclusive-whole-house-country-manor-stay-on-leeds-castle-estate"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.617561,
-          51.250213
         ]
       }
     }
